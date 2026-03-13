@@ -1,0 +1,9 @@
+import test,{chromium} from "@playwright/test"
+test('Test for Saleseforce login', async({page}) =>
+{
+    await page.goto('https://login.salesforce.com/')
+    await page.locator('[id="username"]').fill("dilipkumar.rajendran@testleaf.com")
+    await page.locator('#password').fill("TestLeaf@2025")
+    await page.locator('[id="Login"]').click()    
+}
+)
